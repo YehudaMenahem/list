@@ -1,5 +1,7 @@
-/* 
+/* reset css for browsers and consistency */
+@import 'normalize.css';
 
+/* 
 css for main Container 
 css for Title  
 css for Input 
