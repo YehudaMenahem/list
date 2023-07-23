@@ -1,0 +1,17 @@
+/* Button */
+
+.small{
+    padding: 5px 10px;
+}
+
+.medium{
+    padding: 10px 20px;
+}
+
+.large{
+    padding: 15px 30px;
+}
+
+.full-width{
+    width: 100%;
+}

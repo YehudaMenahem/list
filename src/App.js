@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import { useLocalStorage } from './useLocalStorage'
 
 import './App.css';
+import Button from './Button';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 
   //functions
   const addToTodos = () => {
+    if(val === '') return
     setTodos([...todos, val])
     setValue([...todos, val])
     setVal('')
@@ -37,7 +39,7 @@ function App() {
           value={val}
           onChange={(e) => setVal(e.target.value)}  
         />
-        <button onClick={() => {addToTodos()}}>add todo</button>
+        <Button label="Add Todo" click={() => {addToTodos()}} />
       </div>
 
       <ul className="todo-list">
@@ -46,7 +48,7 @@ function App() {
           <li className="todo" key={`todo-${index}`}>
             <input type="checkbox" />
             <h3>{todo}</h3>
-            <button onClick={()=>{deleteTodo(todo)}}>delete</button>
+            <Button label="Delete" click={() => {deleteTodo(todo)}} />
           </li>
         ))}
       </ul>

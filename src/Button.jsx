@@ -1,16 +1,15 @@
 //create a Button component
 
 import React from 'react';
-// import './Button.css';
+import './button.css';
 
-const Button = ({ children, ...props }) => {
+const Button = ({ label, size, click, classes, fullWidth }) => {
 
   return (
-    <button {...props}>
-        {children}
+    <button className={`${classes ? classes:""} ${size ? size:""} ${fullWidth ? "full-width":""}`} onClick={click}>
+        {label}
     </button>
-
-    );
+  );
 }
 
 export default Button;
